@@ -1,0 +1,57 @@
+.containerWrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img-overlay {
+  position: relative;
+}
+
+.homeRow {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.card-title {
+  opacity: 100%;
+  font-size: 48px;
+  margin: 10px auto;
+  color: white;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 24px;
+  margin: 10px auto;
+}
+
+.navlinks {
+  font-size: 20px;
+  font-weight: 500;
+  width: 130px;
+  margin: 10px 10px 10px 0px;
+  padding: 12px 4px;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  background: none;
+  border: 2px solid black;
+  outline: none;
+}
+
+.navlinks:hover {
+  border: 2px solid white;
+}
+
+.contactContainer {
+  width: 50%;
+  float: right;
+  margin: 15px auto;
+  background: rgba(2, 2, 2, 0.4);
+  padding-left: 15px;
+}

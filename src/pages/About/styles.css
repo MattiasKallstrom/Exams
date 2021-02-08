@@ -1,0 +1,17 @@
+.aboutContainer {
+  background: rgba(0, 0, 0, 0.5);
+  width: 51%;
+  margin: 0 !important;
+}
+
+.aboutContainer2 {
+  width: 51%;
+  margin-top: 30px;
+  margin-right: 0 !important;
+  float: right;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.containerText {
+  float: right;
+}

@@ -1,0 +1,57 @@
+.footerContainer {
+  height: 200px;
+  box-shadow: 0px 2px 6px 0 rgb(71, 71, 71);
+  position: relative;
+  min-width: 100%;
+  border-top: 2px solid black;
+  bottom: 0;
+}
+
+.row {
+  margin: 10px auto;
+  margin-top: 0;
+}
+
+.col {
+  margin: 0px auto;
+  padding: 5px 20px;
+}
+
+.footerlinks {
+  font-weight: 500;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+  padding: 1px;
+}
+
+.fText {
+  font-size: 18px;
+}
+
+.fText:hover {
+  border-bottom: 2px solid black;
+}
+
+.footerinfo {
+  text-align: left;
+  font-weight: 500;
+}
+
+.footerTitles {
+  margin: 2px;
+  text-transform: uppercase;
+  text-decoration: underline 3px solid rgb(44, 44, 44);
+}
+
+.footerSocial {
+  text-align: right;
+  font-weight: 500;
+}
+
+.socialImages {
+  margin: 5px;
+  max-width: 30px;
+}

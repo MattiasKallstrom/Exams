@@ -1,0 +1,11 @@
+.input {
+  width: 100%;
+  padding: 12px 4px;
+  font-size: 18px;
+  text-align: left;
+  display: block;
+}
+
+.Row {
+  margin: 10px 10px 10px 0px;
+}
