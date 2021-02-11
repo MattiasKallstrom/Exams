@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home/home';
 import About from './pages/About/about';
 import Contact from './pages/Contact/contact';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
 
 
 //Layout
@@ -27,7 +27,7 @@ class App extends Component {
     this.state = ({
       ...initialState
     });
-  };
+  }
 
   authListener = null;
 

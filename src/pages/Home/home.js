@@ -1,115 +1,137 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles.css';
-import { emailjs } from 'emailjs-com';
+import emailjs from 'emailjs-com';
+import apiKeys from './../../apikeys';
 import { Link } from 'react-router-dom';
-import Button from './../../components/forms/Button';
-import Input from './../../components/forms/Input';
-import hero1 from '../../assets/hero1.jpg';
-import {Card, Row, Col, Container} from 'react-bootstrap';
+import {
+  Card, Row, Col, Container,
+} from 'react-bootstrap';
+import Button from '../../components/forms/Button/button';
+import Input from '../../components/forms/Input/input';
 
-const initialState = {
-    from_name: '',
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    name: '',
     email: '',
     telephone: '',
-    message: '',
-    error: ''
-};
+    feedback: '',
+    error: '',
+    };
+  } 
+
+  nameChange = (event) => {
+    this.setState({name: event.target.value})
+  }
+  emailChange = (event) => {
+    this.setState({email: event.target.value})
+  }
+  telephoneChange = (event) => {
+    this.setState({telephone: event.target.value})
+  }
+  messageChange = (event) => {
+    this.setState({feedback: event.target.value})
+  }
+
+  sendFeedback = (event) => {
+    event.preventDefault();
+    emailjs.sendForm(
+      'gmail', apiKeys.TEMPLATE_ID,
+      event.target, apiKeys.USER_ID
+    ).then(result => {
+      //Successfully sent email
+      alert({
+        error: 'E-post skickad!'
+      })
+    })
+    //Failed to send email
+    .catch(err => {
+      alert({
+        title: 'E-post misslyckades att skickas'
+      })
+      console.error('Email error', err)
+    })
+    const form = document.querySelector('.form')
+    form.addEventListener('submit',this.sendFeedback)
+  }
 
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            ...initialState
-        };
-        this.changeHandler = this.changeHandler.bind(this);
-    }    
+  render() {
+    return (
 
-    changeHandler(e) {
-        const {name, value} = e.target;
-        this.setState({
-            [name]: value
-        });
-    }
+      <Container fluid className="containerWrapper">
+        <Card>
+            <Row>
+              <Col className="homeRow">
+                <div className="backDrop">
+                <Card.Title> Din Elektriker på Mälaröarna</Card.Title>
+                <Card.Text>
+                  Vi utför allt från badrumsrenoveringar till enklare hushålls installationer.
+                </Card.Text>
+                <Card.Text>
+                  Hör av dig till oss för att få en offert.
+                </Card.Text>
+                <Link to="/about">
+                  <Button type="submit" className="navlinks">Om oss </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button className="navlinks"> Kontakt </Button>
+                </Link>
+                </div>
+              </Col>
+            </Row>
+        </Card>
+        <Row>
+              <Col className="middleRow">
+                <Card.Title> Bästa valet av elektriker i </Card.Title>
+                <Card.Text>Ekerö, Färingsö, Adelsö, Stenhamra och Skå</Card.Text>
+                <Card.Text>
+                  Etablerat sedan tidigt 2000 är vi ett företag som hållt fast i starka principer som alltid ska gynna kunden.
+                </Card.Text>
+                <Card.Text>
+                  Huvudkontoret ligger i Ekerö, då vi vill vara det självklara valet av elekektriker i alla närliggande områden.
+                </Card.Text>
+              </Col>
+            </Row>
 
-    sendEmail(e) {
-        alert("Ditt mejl har skickats!");
-        const templateParams = {
-            from_name: this.state.from_name + " (" + this.state.email + ")",
-            to_name: 'user_3GkPtYG6hwLsqt0msFqm1',
-            message: this.state.message
-          };
-        e.preventDefault();
-        emailjs.sendForm('default_service', 'template', templateParams, 'user_3GkPtYG6hwLsqt0msFqm1', {
-            from_name: '',
-            email: '',
-            telephone: '',
-            message: '',
-        },
-        console.log("SUCCESS")
-        );
-      }
-    
-    render() {
-        const { from_name, email, telephone, message } = this.state;
-        
-        return (
-            <Container fluid className="containerWrapper">
-                <Card className="bg-dark text-white">
-                <Card.Img src={hero1} alt="Background image"/>
-                        <Card.ImgOverlay>
-                            <Row className="homeRow">
-                                <Col>
-                          <Card.Title> Din Elektriker på Mälaröarna</Card.Title>
-                            <Card.Text>
-                                Vi utför allt från badrumsrenoveringar till enklare hushålls installationer.
-                            </Card.Text>
-                            <Card.Text>
-                                Hör av dig till oss för att få en offert.
-                            </Card.Text>
-                                <Link to ="/about">
-                                    <Button type="submit" className="navlinks">Om oss </Button>
-                                </Link>
-                                <Link to="/contact">
-                                     <Button className="navlinks"> Kontakt </Button>
-                                </Link>
-                                </Col>   
-                                <Col>
-                        <Card.Title>Vill du bli kontaktad?</Card.Title>
-                        <Card.Text>Fyll i din information så hör vi av oss så fort vi kan</Card.Text>
-                       
-                        <form onSubmit={this.sendEmail}>
-                            <Input placeholder="Namn" type="text"
-                            name="from_name"
-                            value={from_name}
-                            onChange={this.changeHandler}
-                            />
-                            <Input placeholder="E-post" type="text"
-                            name="email"
-                            value={email}
-                            onChange={this.changeHandler}
-                            />
-                            <Input placeholder="Telefon" type="text"
-                            name="telephone"
-                            value={telephone}
-                            onChange={this.changeHandler}
-                            />
-                            <Input placeholder="Beskriv ditt ärende" type="text"
-                            name="message"
-                            value={message}
-                            onChange={this.changeHandler}
-                            />
-                            <Link to ="/" >
-                            <Button onClick={this.sendEmail} type="submit" className="navlinks"> Skicka </Button>
-                            </Link>
-                    </form>
-                    </Col>                         
-                </Row>
-            </Card.ImgOverlay>
-            </Card>  
-        </Container>   
-        );
-    }
+        <Row>
+          <Col className="inputRow">
+            <Card.Title>Vill du bli kontaktad?</Card.Title>
+            <Card.Text>Fyll i din information så hör vi av oss så fort vi kan</Card.Text>
+
+            <form className="form" onSubmit={this.sendFeedback}>
+              <Input
+                placeholder="Namn"
+                type="text"
+                name="name"
+                onChange={this.nameChange}
+              />
+              <Input
+                placeholder="E-post"
+                type="text"
+                name="email"
+                onChange={this.emailChange}
+              />
+              <Input
+                placeholder="Telefon"
+                type="text"
+                name="telephone"
+                onChange={this.telephoneChange}
+              />
+              <Input
+                placeholder="Beskriv ditt ärende"
+                type="text"
+                name="message"
+                onChange={this.messageChange}
+              />
+                <Button type="submit" className="navlinks"> Skicka </Button>
+            </form>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
 }
 
 export default Home;

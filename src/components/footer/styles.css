@@ -1,5 +1,5 @@
 .footerContainer {
-  height: 200px;
+  min-height: 200px;
   box-shadow: 0px 2px 6px 0 rgb(71, 71, 71);
   position: relative;
   min-width: 100%;
@@ -7,7 +7,7 @@
   bottom: 0;
 }
 
-.row {
+.footerRow {
   margin: 10px auto;
   margin-top: 0;
 }

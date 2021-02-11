@@ -1,37 +1,57 @@
 .containerWrapper {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.card-img {
-  position: relative;
-}
-
-.card-img-overlay {
-  position: relative;
+.card {
+  border: none;
 }
 
 .homeRow {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-image: url("../../assets/hero1.jpg");
+  color: white;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  padding-left: 10px;
+  height: 900px;
 }
 
 .card-title {
-  opacity: 100%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  padding-top: 50px;
+  color: white;
   font-size: 48px;
   margin: 10px auto;
-  color: white;
   font-weight: 500;
 }
 
 .card-text {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  font-weight: 700;
+  color: white;
   font-size: 24px;
   margin: 10px auto;
+}
+
+.inputRow {
+  margin-left: 50px;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/inputImg.jpg");
+  height: 900px;
 }
 
 .navlinks {
   font-size: 20px;
   font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
   width: 130px;
+  font-weight: 700;
+  font-size: 24px;
   margin: 10px 10px 10px 0px;
   padding: 12px 4px;
   font-family: sans-serif;
@@ -42,16 +62,21 @@
   background: none;
   border: 2px solid black;
   outline: none;
+  border-radius: 10%;
 }
 
 .navlinks:hover {
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
+  background: black;
 }
 
-.contactContainer {
-  width: 50%;
-  float: right;
-  margin: 15px auto;
-  background: rgba(2, 2, 2, 0.4);
-  padding-left: 15px;
+.middleRow {
+  background: linear-gradient(rgb(136, 134, 134), white);
+  position: relative;
+  text-align: center;
+  height: 500px;
+}
+
+.form {
+  width: 70%;
 }
