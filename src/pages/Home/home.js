@@ -64,7 +64,6 @@ class Home extends React.Component {
         <Card>
             <Row>
               <Col className="homeRow">
-                <div className="backDrop">
                 <Card.Title> Din Elektriker på Mälaröarna</Card.Title>
                 <Card.Text>
                   Vi utför allt från badrumsrenoveringar till enklare hushålls installationer.
@@ -78,8 +77,9 @@ class Home extends React.Component {
                 <Link to="/contact">
                   <Button className="navlinks"> Kontakt </Button>
                 </Link>
-                </div>
+                
               </Col>
+              
             </Row>
         </Card>
         <Row>
@@ -96,7 +96,7 @@ class Home extends React.Component {
             </Row>
 
         <Row>
-          <Col className="inputRow">
+          <Col className="contact">
             <Card.Title>Vill du bli kontaktad?</Card.Title>
             <Card.Text>Fyll i din information så hör vi av oss så fort vi kan</Card.Text>
 

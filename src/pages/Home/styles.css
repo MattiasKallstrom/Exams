@@ -8,6 +8,11 @@
   border: none;
 }
 
+.middleRow {
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+
 .homeRow {
   background-image: url("../../assets/hero1.jpg");
   color: white;
@@ -75,8 +80,4 @@
   position: relative;
   text-align: center;
   height: 500px;
-}
-
-.form {
-  width: 70%;
 }
