@@ -8,7 +8,6 @@
   position: relative;
   margin: 0;
   height: 100%;
-  width: 100%;
 }
 
 .logo {
@@ -16,18 +15,6 @@
   left: 10px;
   top: 50%;
   font-size: 40px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.nav {
-  position: relative;
-  top: 50%;
-  font-size: 24px;
-  text-transform: uppercase;
-  float: right;
-  line-height: 1;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -46,7 +33,7 @@ li {
 }
 
 li :hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 li {
@@ -55,10 +42,46 @@ li {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 a:hover {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  top: 24px;
+  left: 90%;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-menu {
+  background: #2b2a2a4b;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #2b2a2a4b;
 }
