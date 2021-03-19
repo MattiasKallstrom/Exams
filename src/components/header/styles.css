@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ a:hover {
 }
 
 .bm-cross {
-  background: #bdc3c7;
+  background: #000000;
 }
 
 .bm-menu-wrap {
@@ -77,11 +77,11 @@ a:hover {
 }
 
 .bm-menu {
-  background: #2b2a2a4b;
+  background: #cacaca;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
 .bm-morph-shape {
-  fill: #2b2a2a4b;
+  fill: #cacaca;
 }

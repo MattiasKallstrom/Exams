@@ -30,12 +30,11 @@ class Footer extends Component {
              <Link to="/" className="fText">
                     Startsida
                  </Link><br></br>
-            
-             <Link to="/services" className="fText">
-                    Tjänster
-                 </Link><br></br>
                  <Link to="/about" className="fText">
                     Om oss
+                 </Link><br></br>
+                 <Link to="/login" className="fText">
+                    Logga in
                  </Link><br></br>
                  <Link to="/contact" className="fText">
                     Kontakt

@@ -14,7 +14,7 @@ const Header = props => {
                         <Image src={lamp}></Image>
                     </Link>
                 </div>
-                <Hamburger />
+                <Hamburger/>
                 </div>
         </header>
     );
