@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './default.css';
 
 const app = (
-  <BrowserRouter>
+  <BrowserRouter basename="/Exams">
     <App />
   </BrowserRouter>
 );
