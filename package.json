@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.6.0",
     "emailjs-com": "^2.6.4",
-    "firebase": "^8.2.3",
+    "firebase": "^8.10.0",
     "node-sass": "^7.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -28,9 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
- 
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
