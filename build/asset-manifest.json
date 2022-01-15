@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/%7BMattiasKallstrom%7D/static/css/main.d0d67d4a.chunk.css",
+    "main.js": "/%7BMattiasKallstrom%7D/static/js/main.c7e7278e.chunk.js",
+    "main.js.map": "/%7BMattiasKallstrom%7D/static/js/main.c7e7278e.chunk.js.map",
+    "runtime-main.js": "/%7BMattiasKallstrom%7D/static/js/runtime-main.9d1e793e.js",
+    "runtime-main.js.map": "/%7BMattiasKallstrom%7D/static/js/runtime-main.9d1e793e.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/%7BMattiasKallstrom%7D/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b34527b4.chunk.js": "/%7BMattiasKallstrom%7D/static/js/2.b34527b4.chunk.js",
+    "static/js/2.b34527b4.chunk.js.map": "/%7BMattiasKallstrom%7D/static/js/2.b34527b4.chunk.js.map",
+    "index.html": "/%7BMattiasKallstrom%7D/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/%7BMattiasKallstrom%7D/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.d0d67d4a.chunk.css.map": "/%7BMattiasKallstrom%7D/static/css/main.d0d67d4a.chunk.css.map",
+    "static/js/2.b34527b4.chunk.js.LICENSE.txt": "/%7BMattiasKallstrom%7D/static/js/2.b34527b4.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/%7BMattiasKallstrom%7D/static/media/inputImg.db919834.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d1e793e.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b34527b4.chunk.js",
+    "static/css/main.d0d67d4a.chunk.css",
+    "static/js/main.c7e7278e.chunk.js"
+  ]
+}
