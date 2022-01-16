@@ -61,28 +61,28 @@ class App extends Component {
         <div className="">
         <Route basename="/Exams">
           <Switch>
-           <Route basename="/Exams" exact path ="/" render={() => (
+           <Route exact path ="/" render={() => (
              <MainLayout loggedIn={loggedIn}>
              <Home />
              </MainLayout>
            )} />
-           <Route basename="/Exams" exact path ="/about" render={() => (
+           <Route exact path ="/about" render={() => (
              <MainLayout loggedIn={loggedIn}>
              <About />
              </MainLayout>
            )} />
-           <Route basename="/Exams" exact path ="/contact" render={() => (
+           <Route exact path ="/contact" render={() => (
              <MainLayout loggedIn={loggedIn}>
              <Contact />
              </MainLayout>
            )} />
-           <Route basename="/Exams" exact path ="/register" 
+           <Route exact path ="/register" 
            render={() => loggedIn ? <Redirect to="/"/> :(
              <MainLayout loggedIn={loggedIn}>
              <Register />
              </MainLayout>
            )} />
-           <Route basename="/Exams" exact path ="/login" 
+           <Route exact path ="/login" 
            render={() => loggedIn ? <Redirect to="/"/> :(
              <MainLayout loggedIn={loggedIn}>
              <Login />
