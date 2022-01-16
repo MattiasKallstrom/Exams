@@ -59,10 +59,36 @@ class App extends Component {
     return (
      <Route basename="/Exams">
       <div className="App">
-        <div className="">
-         
+          <Switch>
+           <Route basename="/Exams" path ="/" render={() => (
+             <MainLayout loggedIn={loggedIn}>
+             <Home />
+             </MainLayout>
+           )} />
+           <Route basename="/Exams" path ="/about" render={() => (
+             <MainLayout loggedIn={loggedIn}>
+             <About />
+             </MainLayout>
+           )} />
+           <Route basename="/Exams" path ="/contact" render={() => (
+             <MainLayout loggedIn={loggedIn}>
+             <Contact />
+             </MainLayout>
+           )} />
+           <Route basename="/Exams" path ="/register"
+           render={() => loggedIn ? <Redirect to="/"/> :(
+             <MainLayout loggedIn={loggedIn}>
+             <Register />
+             </MainLayout>
+           )} />
+           <Route basename="/Exams" path ="/login"
+           render={() => loggedIn ? <Redirect to="/"/> :(
+             <MainLayout loggedIn={loggedIn}>
+             <Login />
+             </MainLayout>
+           )} />
+          </Switch>
         </div>
-      </div>
     </Route>
     )
   }
