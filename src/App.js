@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './default.css';
 import { auth, userProfile } from './firebase/utils';
-import { BrowserRouter as  Switch, Route, Router, Routes, Redirect } from "react-router-dom";
+import { BrowserRouter as  Switch, Route, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Pages
@@ -57,10 +57,9 @@ class App extends Component {
   render() {
     const { loggedIn } = this.state;
     return (
+     <Route basename="/Exams">
       <div className="App">
         <div className="">
-        <Router basename="/Exams">
-          <BrowserRouter>
           <Switch>
            <Route exact path ="/" render={() => (
              <MainLayout loggedIn={loggedIn}>
@@ -90,10 +89,9 @@ class App extends Component {
              </MainLayout>
            )} />
           </Switch>
-          </BrowserRouter>
-          </Router>
         </div>
       </div>
+    </Route>
     )
   }
   
