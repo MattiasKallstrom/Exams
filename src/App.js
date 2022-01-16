@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="">
-        <Route basename="/Exams">
+        <Router basename="/Exams">
           <Switch>
            <Route exact path ="/" render={() => (
              <MainLayout loggedIn={loggedIn}>
@@ -89,7 +89,7 @@ class App extends Component {
              </MainLayout>
            )} />
           </Switch>
-          </Route>
+          </Router>
         </div>
       </div>
     )
