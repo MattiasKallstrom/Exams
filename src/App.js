@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './default.css';
 import { auth, userProfile } from './firebase/utils';
-import {  BrowserRouter as  Switch, Route, Router, Routes, Redirect } from "react-router-dom";
+import { BrowserRouter as  Switch, Route, Router, Routes, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Pages
