@@ -60,6 +60,7 @@ class App extends Component {
       <div className="App">
         <div className="">
         <Router basename="/Exams">
+          <Routes>
           <Switch>
            <Route exact path ="/" render={() => (
              <MainLayout loggedIn={loggedIn}>
@@ -89,6 +90,7 @@ class App extends Component {
              </MainLayout>
            )} />
           </Switch>
+          </Routes>
           </Router>
         </div>
       </div>
