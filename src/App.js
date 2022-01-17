@@ -54,7 +54,7 @@ class App extends Component {
   render() {
     const { loggedIn } = this.state;
     return (
-      <Route basename="/Exams">
+      <Route basename="/">
         <div className="App">
           <Switch>
             <Route
@@ -70,7 +70,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/Exams/about"
+              path="/about"
               render={() => (
                 <MainLayout loggedIn={loggedIn}>
                   <About />
@@ -80,7 +80,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/Exams/contact"
+              path="/contact"
               render={() => (
                 <MainLayout loggedIn={loggedIn}>
                   <Contact />
@@ -90,7 +90,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/Exams/register"
+              path="/register"
               render={() =>
                 loggedIn ? (
                   <Redirect to="/Exams" />
@@ -104,7 +104,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/Exams/login"
+              path="/login"
               render={() =>
                 loggedIn ? (
                   <Redirect to="/Exams" />
