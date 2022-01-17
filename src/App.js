@@ -70,7 +70,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/about"
+              path="/Exams/about"
               render={() => (
                 <MainLayout loggedIn={loggedIn}>
                   <About />
@@ -80,7 +80,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/contact"
+              path="/Exams/contact"
               render={() => (
                 <MainLayout loggedIn={loggedIn}>
                   <Contact />
@@ -90,7 +90,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/register"
+              path="/Exams/register"
               render={() =>
                 loggedIn ? (
                   <Redirect to="/Exams" />
@@ -104,7 +104,7 @@ class App extends Component {
             <Route
               basename="/Exams"
               exact
-              path="/login"
+              path="/Exams/login"
               render={() =>
                 loggedIn ? (
                   <Redirect to="/Exams" />
