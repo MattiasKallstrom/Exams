@@ -26,7 +26,7 @@ class Footer extends Component {
             <div className="footerlinks">
               <div className="footerTitles">Navigation</div>
 
-              <Link to="/" className="fText">
+              <Link to="/Exams" className="fText">
                 Startsida
               </Link>
               <br></br>

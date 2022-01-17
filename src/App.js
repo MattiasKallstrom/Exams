@@ -58,7 +58,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route
-              basename="/"
+              basename="/Exams"
               exact
               path="/Exams"
               render={() => (

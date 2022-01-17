@@ -10,7 +10,7 @@ const Header = (props) => {
     <header className="header">
       <div className="wrapper">
         <div className="logo">
-          <Link to="/">
+          <Link to="/Exams">
             <Image src={lamp}></Image>
           </Link>
         </div>
