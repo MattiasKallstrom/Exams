@@ -1,51 +1,17 @@
-import React from "react";
-import { elastic as Menu } from "react-burger-menu";
-import { Link } from "react-router-dom";
-import { auth } from "../../firebase/utils";
-import "./styles.css";
-
-const hamburgerMenu = (props) => {
-  const { loggedIn } = props;
+export default function HamburgerMenu({ isOpen }) {
   return (
-    <Menu right>
-      <header className="header">
-        <div className="nav">
-          <ul>
-            <li>
-              <Link to="/about">Om oss</Link>
-            </li>
-            <li>
-              <Link to="/contact">Kontakta oss</Link>
-            </li>
-          </ul>
+    <>
+      <div className="hamburger place-content-around flex md:hidden w-7 h-7 my-2 pl-2 z-10">
+        <div className="burger flex-nowrap w-7 h-1 bg-black" />
+        <div className="burger flex-nowrap w-7 h-1 bg-black" />
+        <div className="burger flex-nowrap w-7 h-1 bg-black" />
+      </div>
 
-          <ul>
-            {!loggedIn && (
-              <li onClick={() => auth.signOut()}>
-                <Link to="/Exams">Logga ut</Link>
-              </li>
-            )}
-          </ul>
-
-          {!loggedIn && (
-            <ul>
-              <li>
-                <Link to="/register">Registrera</Link>
-              </li>
-
-              <li>
-                <Link to="/login">Logga in</Link>
-              </li>
-            </ul>
-          )}
-        </div>
-      </header>
-    </Menu>
+      <style jsx>{`
+        .hamburger {
+          flex-flow: column nowrap;
+        }
+      `}</style>
+    </>
   );
-};
-
-hamburgerMenu.defaultProps = {
-  loggedIn: null,
-};
-
-export default hamburgerMenu;
+}

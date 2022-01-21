@@ -3,9 +3,8 @@ import "./styles.css";
 import emailjs from "emailjs-com";
 import apiKeys from "./../../apikeys";
 import { Link } from "react-router-dom";
-import { Card, Row, Col, Container } from "react-bootstrap";
-import Button from "../../components/forms/Button/button";
 import Input from "../../components/forms/Input/input";
+import { Image } from "react-bootstrap";
 
 class Home extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ class Home extends React.Component {
       error: "",
     };
   }
-
   nameChange = (event) => {
     this.setState({ name: event.target.value });
   };
@@ -55,82 +53,74 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Container fluid className="containerWrapper">
-        <Card>
-          <Row>
-            <Col className="homeRow">
-              <Card.Title> Din Elektriker på Mälaröarna</Card.Title>
-              <Card.Text>
-                Vi utför allt från badrumsrenoveringar till enklare hushålls
-                installationer.
-              </Card.Text>
-              <Card.Text>Hör av dig till oss för att få en offert.</Card.Text>
-              <Link to="/about">
-                <Button type="submit" className="navlinks">
-                  Om oss{" "}
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button className="navlinks"> Kontakt </Button>
-              </Link>
-            </Col>
-          </Row>
-        </Card>
-        <Row>
-          <Col className="middleRow">
-            <Card.Title> Bästa valet av elektriker i </Card.Title>
-            <Card.Text>Ekerö, Färingsö, Adelsö, Stenhamra och Skå</Card.Text>
-            <Card.Text>
-              Etablerat sedan tidigt 2000 är vi ett företag som hållt fast i
-              starka principer som alltid ska gynna kunden.
-            </Card.Text>
-            <Card.Text>
-              Huvudkontoret ligger i Ekerö, då vi vill vara det självklara valet
-              av elekektriker i alla närliggande områden.
-            </Card.Text>
-          </Col>
-        </Row>
+      <div className="md:ml-40">
+        <div className=" w-full bg-hero bg-auto">
+          <div className="text-3xl md:text-5xl flex text-red-500 font-bold justify-center -ml-5 p-5">
+            Mälarö El AB
+          </div>
+          <div className="justify-left md:justify-center flex-wrap flex p-3  md:p-5">
+            {" "}
+            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+              Kommersiella elektriska uförande
+            </div>
+            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+              All typ av bostadsinstalltioner
+            </div>
+            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+              Nybygge och renovering
+            </div>
+          </div>
+        </div>
 
-        <Row>
-          <Col className="contact">
-            <Card.Title>Vill du bli kontaktad?</Card.Title>
-            <Card.Text>
-              Fyll i din information så hör vi av oss så fort vi kan
-            </Card.Text>
-
-            <form className="form" onSubmit={this.sendFeedback}>
-              <Input
-                placeholder="Namn"
-                type="text"
-                name="name"
-                onChange={this.nameChange}
-              />
-              <Input
-                placeholder="E-post"
-                type="text"
-                name="email"
-                onChange={this.emailChange}
-              />
-              <Input
-                placeholder="Telefon"
-                type="text"
-                name="telephone"
-                onChange={this.telephoneChange}
-              />
-              <Input
-                placeholder="Beskriv ditt ärende"
-                type="text"
-                name="message"
-                onChange={this.messageChange}
-              />
-              <Button type="submit" className="navlinks">
-                {" "}
-                Skicka{" "}
-              </Button>
-            </form>
-          </Col>
-        </Row>
-      </Container>
+        <div className="w-full text-xl md:text-6xl flex text-red-500 text-uppercase font-bold justify-center p-5">
+          Bästa elektrikern på mälaröarna
+        </div>
+        <div className="w-full text-sm md:text-2xl flex text-black font-semibold justify-center px-5">
+          Här hittar du allt gällande elektriska reparationer, säkerhetssystem,
+          hemmabio och automatisering i hemmet
+        </div>
+        <div className="flex flex-row mt-5 justify-center">
+          <button className="bg-red-500 font-semibold flex flex-row hover:bg-black cursor-pointer p-3">
+            {" "}
+            <Link
+              className="text-white text-3xl hover:no-underline	flex justify-center"
+              to="/contact"
+            >
+              Boka service
+            </Link>{" "}
+          </button>
+        </div>
+        <form className="form flex flex-col justify-center mx-20" onSubmit={this.sendFeedback}>
+          <Input
+         
+            placeholder="Namn"
+            type="text"
+            name="name"
+            onChange={this.nameChange}
+          />
+          <Input
+            placeholder="E-post"
+            type="text"
+            name="email"
+            onChange={this.emailChange}
+          />
+          <Input
+            placeholder="Telefon"
+            type="text"
+            name="telephone"
+            onChange={this.telephoneChange}
+          />
+          <Input
+            placeholder="Beskriv ditt ärende"
+            type="text"
+            name="message"
+            onChange={this.messageChange}
+          />
+        </form>
+      </div>
     );
   }
 }

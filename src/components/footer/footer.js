@@ -1,68 +1,87 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import instagramIcon from "./../../assets/instagramIcon.png";
-import facebookIcon from "./../../assets/facebookIcon.png";
-import linkedinIcon from "./../../assets/linkedinIcon.png";
-import { Row, Col, Image, Container } from "react-bootstrap";
-import "./styles.css";
+import { Image } from "react-bootstrap";
 
-class Footer extends Component {
-  render() {
-    return (
-      <Container fluid className="footerContainer">
-        <Row className="footerRow">
-          <Col xs={8} lg={4}>
-            <div className="footerinfo">
-              <div className="footerTitles">Information</div>
-              <div className="fText">
-                Mälarö el AB <br></br>
-                Exempelvägen 208, 179 81 Ekerö<br></br>
-                Tel: 073-999-99 99 <br></br>
-                E-post: info@mälaröel
-              </div>
-            </div>
-          </Col>
-          <Col xs={4} lg={4}>
-            <div className="footerlinks">
-              <div className="footerTitles">Navigation</div>
-
-              <Link to="/Exams" className="fText">
+const Footer = (props) => {
+  return (
+    <div className="bg-gray-100 my-0 md:ml-40 flex justify-center">
+      <div className="max-w-6xl text-gray-800 flex flex-wrap justify-center">
+        <div className="p-10 w-100%">
+          <div className="text-m uppercase text-gray-500 font-medium">
+            Kontakt
+          </div>
+          <a className="my-3 block">
+            <span className="text-gray-500 text-m p-1"> Mälarö el AB</span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-gray-500 text-m p-1">
+              Exempel 208, 179 81 Ekerö
+            </span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-gray-500 text-m p-1">Tel: 073-999-99 99</span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-gray-500 hover:none text-m p-1">
+              {" "}
+              E-post: info@mälaröel
+            </span>
+          </a>
+        </div>
+        <div className="p-10 w-100%">
+          <div className="text-m uppercase text-gray-500 font-medium">
+            Navigering
+          </div>
+          <a className="my-3 block">
+            {" "}
+            <span className="text-m p-1">
+              <Link className="text-gray-500 hover:text-gray-800" to="/Exams">
                 Startsida
-              </Link>
-              <br></br>
-              <Link to="/about" className="fText">
+              </Link>{" "}
+            </span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-m p-1">
+              <Link className="text-gray-500 hover:text-gray-800" to="/about">
                 Om oss
+              </Link>{" "}
+            </span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-m p-1">
+              <Link className="text-gray-500 hover:text-gray-800" to="/contact">
+                Support
               </Link>
-              <br></br>
-              <Link to="/login" className="fText">
+            </span>
+          </a>
+          <a className="my-3 block">
+            <span className="text-m p-1">
+              {" "}
+              <Link className="text-gray-500 hover:text-gray-800" to="/login">
                 Logga in
-              </Link>
-              <br></br>
-              <Link to="/contact" className="fText">
-                Kontakt
-              </Link>
-            </div>
-          </Col>
-          <Col xs={12} lg={4}>
-            <div className="footerSocial">
-              <div className="footerTitles">Sociala medier</div>
+              </Link>{" "}
+            </span>
+          </a>
+        </div>
+        <div className="p-10 w-100%">
+          <div className="text-m uppercase text-gray-500 font-medium">
+            Sociala medier
+          </div>
+          <div className="flex flex-row w-32">
+            <a href="https://instagram.com">
+              <Image src="https://img.icons8.com/glyph-neue/100/000000/instagram-new.png"></Image>
+            </a>
+            <a href="https://facebook.com">
+              <Image src="https://img.icons8.com/material-rounded/100/000000/facebook-new.png"></Image>
+            </a>
+            <a href="https://linkedin.com">
+              <Image src="https://img.icons8.com/ios-filled/100/000000/linkedin.png"></Image>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-              <a href="https://instagram.com">
-                <Image src={instagramIcon} className="socialImages"></Image>
-              </a>
-
-              <a href="https://facebook.com">
-                <Image src={facebookIcon} className="socialImages"></Image>
-              </a>
-
-              <a href="https://linkedin.com">
-                <Image src={linkedinIcon} className="socialImages"></Image>
-              </a>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
 export default Footer;

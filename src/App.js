@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./default.css";
+import "./index.css";
 import { auth, userProfile } from "./firebase/utils";
 import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
