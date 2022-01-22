@@ -60,21 +60,26 @@ class Home extends React.Component {
           </div>
           <div className="justify-left md:justify-center flex-wrap flex p-3  md:p-5">
             {" "}
-            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
-            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
-              Kommersiella elektriska uförande
+            <div className="flex flex-row">
+              <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+              <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+                Kommersiella elektriska uförande
+              </div>
             </div>
-            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
-            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
-              All typ av bostadsinstalltioner
+            <div className="flex flex-row">
+              <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+              <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+                All typ av bostadsinstalltioner
+              </div>
             </div>
-            <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
-            <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
-              Nybygge och renovering
+            <div className="flex flex-row">
+              <Image src="https://img.icons8.com/ios/000000/checked-2--v2.png"></Image>
+              <div className="flex text-black text-sm md:text-lg font-semibold px-1 pt-2">
+                Nybygge och renovering
+              </div>
             </div>
           </div>
         </div>
-
         <div className="w-full text-xl md:text-6xl flex text-red-500 text-uppercase font-bold justify-center p-5">
           Bästa elektrikern på mälaröarna
         </div>
@@ -83,19 +88,119 @@ class Home extends React.Component {
           hemmabio och automatisering i hemmet
         </div>
         <div className="flex flex-row mt-5 justify-center">
-          <button className="bg-red-500 font-semibold flex flex-row hover:bg-black cursor-pointer p-3">
+          <button className="bg-red-500 font-semibold hover:bg-black cursor-pointer p-3">
             {" "}
             <Link
-              className="text-white text-3xl hover:no-underline	flex justify-center"
+              className="text-white text-3xl text-uppercase hover:no-underlineflex justify-center"
               to="/contact"
             >
               Boka service
             </Link>{" "}
           </button>
+        </div>{" "}
+        <div className="w-full bg-gray-100 flex flex-wrap text-5xl p-5 overflow-hidden justify-center my-4">
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80	h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-wrench"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Elektriska Reparationer
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-cog"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Panel upgradering
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-home"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Renovering och ombyggnad
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bxs-bolt"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Elektriska Generatorer
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-bulb"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Lyse och värme
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-bot"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                automatisering i hemmet
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-home-heart"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Säkerhet i hemmet
+              </div>
+            </Link>
+          </button>
+          <button>
+            {" "}
+            <Link
+              className="bg-white w-80 h-48 m-2 hover:no-underline hover:text-black drop-shadow-md text-red-500 flex flex-wrap justify-center py-2 bx bx-check-shield"
+              to="/contact"
+            >
+              {" "}
+              <div className="text-black flex flex-wrap text-3xl text-uppercase justify-center">
+                Säkerhets inspektioner
+              </div>
+            </Link>
+          </button>
         </div>
-        <form className="form flex flex-col justify-center mx-20" onSubmit={this.sendFeedback}>
+        <form
+          className="form flex flex-col justify-center mx-20"
+          onSubmit={this.sendFeedback}
+        >
           <Input
-         
             placeholder="Namn"
             type="text"
             name="name"
@@ -119,6 +224,12 @@ class Home extends React.Component {
             name="message"
             onChange={this.messageChange}
           />
+          <button
+            type="submit"
+            className="bg-red-500 font-semibold text-uppercase hover:bg-black cursor-pointer p-3 w-32 text-white text-2xl hover:no-underline	flex justify-center"
+          >
+            Skicka
+          </button>
         </form>
       </div>
     );
