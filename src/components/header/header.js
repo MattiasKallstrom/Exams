@@ -20,11 +20,12 @@ export default function Header(props) {
           <div className="flex md:hidden" onClick={toggleHamburger}>
             <HamburgerMenu isOpen={hamburgerOpen} />
           </div>{" "}
-          <div className=" hidden md:flex items-center justify-center h-20 shadow-md">
+          <div className=" hidden md:flex items-center flex-col justify-center h-20 shadow-md">
             {" "}
             <Link to="/Exams">
               <Image src={lamp}></Image>
             </Link>
+            <div className="text-uppercase font-semibold">Mälarö El</div>
           </div>
           <ul className="flex flex-col py-4">
           <li>
