@@ -6,7 +6,6 @@ export default function HamburgerMenu({ isOpen }) {
         <div className="burger flex-nowrap w-7 h-1 bg-black" />
         <div className="burger flex-nowrap w-7 h-1 bg-black" />
       </div>
-
       <style jsx>{`
         .hamburger {
           flex-flow: column nowrap;
