@@ -70,17 +70,16 @@ export default function Header(props) {
             </li>
             {!loggedIn && (
               <li>
-             
                 <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
                   <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                     <i className="bx bx-shopping-bag"></i>
                   </span>
                   <Link
-                  className="text-gray-500 hover:text-gray-800 text-sm font-medium"
-                  to="/register"
-                >
-                  Registrera
-                </Link>
+                    className="text-gray-500 hover:text-gray-800 text-sm font-medium"
+                    to="/register"
+                  >
+                    Registrera
+                  </Link>
                 </a>
               </li>
             )}{" "}
@@ -99,25 +98,23 @@ export default function Header(props) {
                 </a>
               </li>
             )}{" "}
-                        {loggedIn && (
-
-            <li>
-              <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200">
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                  <i className="bx bx-log-out"></i>
-                </span>
-                <li onClick={() => auth.signOut()}>
-                  <Link
-                    className="text-gray-500 hover:text-gray-800 text-sm font-medium"
-                    to="/Exams"
-                  >
-                    Logga ut
-                  </Link>
-                </li>
-              </a>
-            </li>
-                        )}{" "}
-
+            {loggedIn && (
+              <li>
+                <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200">
+                  <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                    <i className="bx bx-log-out"></i>
+                  </span>
+                  <li onClick={() => auth.signOut()}>
+                    <Link
+                      className="text-gray-500 hover:text-gray-800 text-sm font-medium"
+                      to="/Exams"
+                    >
+                      Logga ut
+                    </Link>
+                  </li>
+                </a>
+              </li>
+            )}{" "}
           </ul>
         </div>
       </div>{" "}
