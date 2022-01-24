@@ -54,50 +54,62 @@ class SignUp extends Component {
     const { displayName, email, password, confirmPass, error } = this.state;
 
     return (
-      <div className="signup">
-        {error.length > 0 && (
-          <ul className="errorMsg">
-            {error.map((err, index) => {
-              return <li key={index}>{err}</li>;
-            })}
-          </ul>
-        )}
-        <div className="wrapper">
-          <div className="formWrapper">
-            <h1>Registrera dig</h1>
+      <div>
+        <div className=" w-full bg-hero bg-auto">
+          <div className="text-3xl md:text-5xl flex text-uppercase text-red-500 font-bold justify-center -ml-5 p-5">
+            Registrera
+          </div>
+        </div>
+        <div className="signup flex">
+          {error.length > 0 && (
+            <ul className="errorMsg">
+              {error.map((err, index) => {
+                return <li key={index}>{err}</li>;
+              })}
+            </ul>
+          )}
+          <div className="wrapper">
+            <div className="formWrapper">
+              <h1>Registrera dig</h1>
 
-            <form onSubmit={this.submitHandler}>
-              <Input
-                placeholder="Name"
-                type="text"
-                name="displayName"
-                value={displayName}
-                onChange={this.changeHandler}
-              />
-              <Input
-                placeholder="E-post"
-                type="text"
-                name="email"
-                value={email}
-                onChange={this.changeHandler}
-              />
-              <Input
-                placeholder="Lösenord"
-                type="password"
-                name="password"
-                value={password}
-                onChange={this.changeHandler}
-              />
-              <Input
-                placeholder="Upprepa lösenord"
-                type="password"
-                name="confirmPass"
-                value={confirmPass}
-                onChange={this.changeHandler}
-              />
+              <form onSubmit={this.submitHandler}>
+                <Input
+                  placeholder="Namn"
+                  type="text"
+                  name="displayName"
+                  value={displayName}
+                  onChange={this.changeHandler}
+                />
+                <Input
+                  placeholder="E-post"
+                  type="text"
+                  name="email"
+                  value={email}
+                  onChange={this.changeHandler}
+                />
+                <Input
+                  placeholder="Lösenord"
+                  type="password"
+                  name="password"
+                  value={password}
+                  onChange={this.changeHandler}
+                />
+                <Input
+                  placeholder="Upprepa lösenord"
+                  type="password"
+                  name="confirmPass"
+                  value={confirmPass}
+                  onChange={this.changeHandler}
+                />
 
-              <Button type="submit">Skicka</Button>
-            </form>
+                <button
+                  type="submit"
+                  className="bg-black font-semibold text-uppercase hover:bg-red-500 cursor-pointer p-3 h-12 w-24 my-2 text-white text-xl items-center hover:no-underline	flex justify-center"
+                >
+                  Skicka
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

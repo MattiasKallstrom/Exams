@@ -39,7 +39,14 @@ class SignIn extends Component {
   render() {
     const { email, password } = this.state;
     return (
+      <div>
+  <div className=" w-full bg-hero bg-auto">
+        <div className="text-3xl md:text-5xl flex text-uppercase text-red-500 font-bold justify-center -ml-5 p-5">
+          Mälarö El AB
+        </div>
+        </div>
       <Container>
+    
         <div className="signin">
           <div className="formWrapper">
             <h1>Inloggning</h1>
@@ -58,19 +65,27 @@ class SignIn extends Component {
                 placeholder="Lösenord"
                 onChange={this.changeHandler}
               />
-              <Button type="submit">Logga in</Button>
+                <button
+                  type="submit"
+                  className="bg-black font-semibold text-uppercase hover:bg-red-500 cursor-pointer p-3 my-2 text-white text-xl items-center hover:no-underline	flex justify-center"
+                >
+                  Logga in
+                </button>
 
               <div className="googleSignin">
-                <div>
-                  <Button onClick={signInWithGoogle}>
-                    Logga in med Google
-                  </Button>
+                <div>  <button onClick={signInWithGoogle}
+                  type="submit"
+                  className="bg-black font-semibold text-uppercase hover:bg-red-500 cursor-pointer p-3 my-2 text-white text-xl items-center hover:no-underline	flex justify-center"
+                >
+                  Logga in med Google konto
+                </button>
+                  
                 </div>
               </div>
             </form>
           </div>
         </div>
-      </Container>
+      </Container></div>
     );
   }
 }
