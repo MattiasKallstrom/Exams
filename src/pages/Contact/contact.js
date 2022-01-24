@@ -34,13 +34,10 @@ class Contact extends React.Component {
     event.preventDefault();
     emailjs
       .sendForm("gmail", apiKeys.TEMPLATE_ID, event.target, apiKeys.USER_ID)
-      .then((result) => {
-        //Successfully sent email
-        alert({
-          error: "E-post skickad!",
-        });
+      .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text)
+
       })
-      //Failed to send email
       .catch((err) => {
         alert({
           title: "E-post misslyckades att skickas",

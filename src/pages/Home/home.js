@@ -55,7 +55,7 @@ class Home extends React.Component {
     return (
       <div className="md:ml-40">
         <div className=" w-full bg-hero bg-auto">
-          <div className="text-3xl md:text-5xl flex text-red-500 font-bold justify-center -ml-5 p-5">
+          <div className="text-3xl md:text-5xl flex text-uppercase text-red-500 font-bold justify-center -ml-5 p-5">
             Mälarö El AB
           </div>
           <div className="justify-left text-white md:justify-center flex-wrap flex p-3  md:p-5">
