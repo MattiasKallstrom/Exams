@@ -3,10 +3,10 @@
   width: 100%;
   max-width: 400px;
   margin: auto;
+  margin-top: 40px;
   padding-top: 10px;
   border: 1px solid black;
   box-shadow: 10px 10px 10px grey;
-  margin-bottom: 300px;
 }
 
 h1 {

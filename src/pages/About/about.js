@@ -10,14 +10,14 @@ class About extends Component {
             Om oss
           </div>
         </div>
-        <div className="w-full text-sm md:text-xl font-light flex flex-col text-black my-5 justify-left px-5">
+        <div className="w-full max-w-7xl text-sm md:text-xl font-light flex flex-col text-black my-5 justify-left px-5">
           Grundat 1960 av Mikael Doe, vårat företags dedikering till service på
           snabb tid och kvalitetsförsäkring har fått Mälarö El att växa till ett
           av de största elektriker företagen i västerort. Idag är företaget ägt
           utav fyra individer vid namn Mats Doe, Johanna Doe, Karin Doe och
           Fritjoff Doe.
           <br></br>
-          <br></br>  
+          <br></br>
           Varje medlem i teamet arbetar med passion för att försäkra er alla om
           att ni får den kvalitetsservice vi är kända och stolta över. Idag är
           företaget ägt utav fyra individer vid namn Mats Doe, Johanna Doe,
@@ -67,7 +67,6 @@ class About extends Component {
           occaecat adipisicing deserunt dolore. Anim dolor mollit do dolor dolor
           ea nisi proident minim in.
         </div>{" "}
-      
       </div>
     );
   }

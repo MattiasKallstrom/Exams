@@ -54,7 +54,7 @@ class SignUp extends Component {
     const { displayName, email, password, confirmPass, error } = this.state;
 
     return (
-      <div>
+      <div className="min-h-screen">
         <div className=" w-full bg-hero bg-auto">
           <div className="text-3xl md:text-5xl flex text-uppercase text-red-500 font-bold justify-center -ml-5 p-5">
             Registrera

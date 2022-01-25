@@ -49,7 +49,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="min-h-screen">
         <div className=" w-full bg-hero bg-auto">
           <div className="text-3xl md:text-5xl flex text-uppercase text-red-500 font-bold justify-center -ml-5 p-5">
             Kontakta oss
