@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Exams/static/css/main.bd16aa11.css",
-    "main.js": "/Exams/static/js/main.080519f7.js",
+    "main.css": "/Exams/static/css/main.412b8aea.css",
+    "main.js": "/Exams/static/js/main.2c52dbc2.js",
     "static/media/vindkraft.png": "/Exams/static/media/vindkraft.9d38d7b6d427d3d67ba9.png",
     "index.html": "/Exams/index.html",
-    "main.bd16aa11.css.map": "/Exams/static/css/main.bd16aa11.css.map",
-    "main.080519f7.js.map": "/Exams/static/js/main.080519f7.js.map"
+    "main.412b8aea.css.map": "/Exams/static/css/main.412b8aea.css.map",
+    "main.2c52dbc2.js.map": "/Exams/static/js/main.2c52dbc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd16aa11.css",
-    "static/js/main.080519f7.js"
+    "static/css/main.412b8aea.css",
+    "static/js/main.2c52dbc2.js"
   ]
 }
